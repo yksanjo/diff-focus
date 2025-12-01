@@ -1,5 +1,9 @@
 # Diff-Focus
 
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://www.javascript.com/) [![GitHub stars](https://img.shields.io/github/stars/yksanjo/diff-focus?style=social)](https://github.com/yksanjo/diff-focus/stargazers) [![GitHub forks](https://img.shields.io/github/forks/yksanjo/diff-focus.svg)](https://github.com/yksanjo/diff-focus/network/members) [![GitHub issues](https://img.shields.io/github/issues/yksanjo/diff-focus.svg)](https://github.com/yksanjo/diff-focus/issues)
+[![Last commit](https://img.shields.io/github/last-commit/yksanjo/diff-focus.svg)](https://github.com/yksanjo/diff-focus/commits/main)
+
+
 A lightweight code review context tool that analyzes diffs and generates executive summaries to reduce context-switching cognitive load.
 
 ## Problem Statement
