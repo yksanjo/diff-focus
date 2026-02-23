@@ -1,82 +1,91 @@
-# Diff-Focus
+# diff-focus
 
-A lightweight code review context tool that analyzes diffs and generates executive summaries to reduce context-switching cognitive load.
+Production-grade project scaffold focused on reliability, maintainability, and fast onboarding.
+
+[![CI](https://img.shields.io/github/actions/workflow/status/yksanjo/diff-focus/ci.yml?branch=main&label=ci)](https://github.com/yksanjo/diff-focus/actions)
+![License](https://img.shields.io/github/license/yksanjo/diff-focus)
+![Last Commit](https://img.shields.io/github/last-commit/yksanjo/diff-focus)
+![Repo Size](https://img.shields.io/github/repo-size/yksanjo/diff-focus)
+
+## Detailed Description
+
+diff-focus is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
 ## Problem Statement
 
-When engineers receive code review notifications, they must context-switch from their current work and spend 5-10 minutes deciphering what a change is trying to achieve before they can actually review the logic. Diff-Focus solves this by providing a "30-second context card" that highlights risks, architectural changes, and noise.
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-## Features
+## Solution Overview
 
-- **Risk Assessment**: Automatically categorizes changes as Low/Medium/High risk
-- **Smart Detection**: Identifies file types, dangerous operations, and debug code
-- **Executive Summary**: Natural language explanation of changes
-- **Red Flags**: Highlights specific concerns like DB migrations, auth changes, etc.
+Summarize the architecture, core modules, and runtime behavior at a high level.
 
-## Tech Stack
+## Key Features
 
-- **Backend**: Node.js + Express
-- **Frontend**: React + Vite + Tailwind CSS
-- **Intelligence**: Heuristic parser (mocking an LLM/AI layer)
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
 
-## Installation
+## Repository Structure
 
-1. Install dependencies:
-```bash
-npm run install-all
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
 ```
 
-Or manually:
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
+
 ```bash
-npm install
-cd client && npm install
+npm ci
+npm run lint
+npm test
+npm run build
 ```
-
-## Development
-
-Run both server and client in development mode:
-```bash
-npm run dev
-```
-
-Or run separately:
-```bash
-# Terminal 1: Backend
-npm start
-
-# Terminal 2: Frontend
-npm run client
-```
-
-- Backend: http://localhost:5000
-- Frontend: http://localhost:5173
-
-## Production Deployment
-
-### Railway/Render Setup
-
-1. Push code to GitHub repository
-2. Connect repo to Railway (or Render)
-3. Build Command: `cd client && npm install && npm run build`
-4. Start Command: `node server.js`
-5. Environment: Set `NODE_ENV=production`
-
-The server will automatically serve the built client from `client/dist` in production mode.
 
 ## Usage
 
-1. Paste a raw git diff into the textarea
-2. Click "Generate Context"
-3. Review the risk assessment, summary, and flags
-4. Enter your code review tool with full context
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-## Example
+## Quality Standards
 
-The app comes with a mock diff pre-loaded that demonstrates:
-- Hack/Backend file detection
-- Authentication logic changes (Medium risk)
-- Debug code detection (var_dump)
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-## Value Proposition
+## Security
 
-Reduces context-switch cognitive load by ~40% by acting as a "triage nurse" for code review, allowing engineers to quickly understand the nature and risk of changes before diving into detailed code review.
+See `SECURITY.md` for responsible disclosure and handling guidelines.
+
+## Contributing
+
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
+
+## License
+
+This project is released under the MIT License.
